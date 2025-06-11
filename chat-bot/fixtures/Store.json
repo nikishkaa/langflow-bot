@@ -1,0 +1,1643 @@
+{
+  "access_type": "PRIVATE",
+  "action_description": null,
+  "action_name": null,
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OllamaEmbeddings",
+            "id": "OllamaEmbeddings-pM407",
+            "name": "embeddings",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding",
+            "id": "Chroma-0TsX2",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-OllamaEmbeddings-pM407{œdataTypeœ:œOllamaEmbeddingsœ,œidœ:œOllamaEmbeddings-pM407œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-Chroma-0TsX2{œfieldNameœ:œembeddingœ,œidœ:œChroma-0TsX2œ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "OllamaEmbeddings-pM407",
+        "sourceHandle": "{œdataTypeœ:œOllamaEmbeddingsœ,œidœ:œOllamaEmbeddings-pM407œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "target": "Chroma-0TsX2",
+        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œChroma-0TsX2œ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-4ZmM3",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "message",
+            "id": "MessagetoData-MPUYr",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-ChatInput-4ZmM3{œdataTypeœ:œChatInputœ,œidœ:œChatInput-4ZmM3œ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-MessagetoData-MPUYr{œfieldNameœ:œmessageœ,œidœ:œMessagetoData-MPUYrœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-4ZmM3",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-4ZmM3œ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "MessagetoData-MPUYr",
+        "targetHandle": "{œfieldNameœ:œmessageœ,œidœ:œMessagetoData-MPUYrœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "MessagetoData",
+            "id": "MessagetoData-MPUYr",
+            "name": "data",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "data",
+            "id": "DataOperations-BrFgO",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-MessagetoData-MPUYr{œdataTypeœ:œMessagetoDataœ,œidœ:œMessagetoData-MPUYrœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}-DataOperations-BrFgO{œfieldNameœ:œdataœ,œidœ:œDataOperations-BrFgOœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "MessagetoData-MPUYr",
+        "sourceHandle": "{œdataTypeœ:œMessagetoDataœ,œidœ:œMessagetoData-MPUYrœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "DataOperations-BrFgO",
+        "targetHandle": "{œfieldNameœ:œdataœ,œidœ:œDataOperations-BrFgOœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "DataOperations",
+            "id": "DataOperations-BrFgO",
+            "name": "data_output",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "data_input",
+            "id": "RecursiveCharacterTextSplitter-mdQcv",
+            "inputTypes": [
+              "Document",
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-DataOperations-BrFgO{œdataTypeœ:œDataOperationsœ,œidœ:œDataOperations-BrFgOœ,œnameœ:œdata_outputœ,œoutput_typesœ:[œDataœ]}-RecursiveCharacterTextSplitter-mdQcv{œfieldNameœ:œdata_inputœ,œidœ:œRecursiveCharacterTextSplitter-mdQcvœ,œinputTypesœ:[œDocumentœ,œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "DataOperations-BrFgO",
+        "sourceHandle": "{œdataTypeœ:œDataOperationsœ,œidœ:œDataOperations-BrFgOœ,œnameœ:œdata_outputœ,œoutput_typesœ:[œDataœ]}",
+        "target": "RecursiveCharacterTextSplitter-mdQcv",
+        "targetHandle": "{œfieldNameœ:œdata_inputœ,œidœ:œRecursiveCharacterTextSplitter-mdQcvœ,œinputTypesœ:[œDocumentœ,œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "RecursiveCharacterTextSplitter",
+            "id": "RecursiveCharacterTextSplitter-mdQcv",
+            "name": "data",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "ingest_data",
+            "id": "Chroma-0TsX2",
+            "inputTypes": [
+              "Data",
+              "DataFrame"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-RecursiveCharacterTextSplitter-mdQcv{œdataTypeœ:œRecursiveCharacterTextSplitterœ,œidœ:œRecursiveCharacterTextSplitter-mdQcvœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}-Chroma-0TsX2{œfieldNameœ:œingest_dataœ,œidœ:œChroma-0TsX2œ,œinputTypesœ:[œDataœ,œDataFrameœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "RecursiveCharacterTextSplitter-mdQcv",
+        "sourceHandle": "{œdataTypeœ:œRecursiveCharacterTextSplitterœ,œidœ:œRecursiveCharacterTextSplitter-mdQcvœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "Chroma-0TsX2",
+        "targetHandle": "{œfieldNameœ:œingest_dataœ,œidœ:œChroma-0TsX2œ,œinputTypesœ:[œDataœ,œDataFrameœ],œtypeœ:œotherœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "description": "Chroma Vector Store with search capabilities",
+          "display_name": "Chroma DB",
+          "id": "Chroma-0TsX2",
+          "node": {
+            "base_classes": [
+              "Data",
+              "DataFrame"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Chroma Vector Store with search capabilities",
+            "display_name": "Chroma DB",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "collection_name",
+              "persist_directory",
+              "ingest_data",
+              "search_query",
+              "should_cache_vector_store",
+              "embedding",
+              "chroma_server_cors_allow_origins",
+              "chroma_server_host",
+              "chroma_server_http_port",
+              "chroma_server_grpc_port",
+              "chroma_server_ssl_enabled",
+              "allow_duplicates",
+              "search_type",
+              "number_of_results",
+              "limit"
+            ],
+            "frozen": false,
+            "icon": "Chroma",
+            "legacy": false,
+            "lf_version": "1.4.2",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Search Results",
+                "method": "search_documents",
+                "name": "search_results",
+                "options": null,
+                "required_inputs": [],
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "DataFrame",
+                "method": "as_dataframe",
+                "name": "dataframe",
+                "options": null,
+                "required_inputs": [],
+                "selected": "DataFrame",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "allow_duplicates": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Allow Duplicates",
+                "dynamic": false,
+                "info": "If false, will not add documents that are already in the Vector Store.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "allow_duplicates",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "chroma_server_cors_allow_origins": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "display_name": "Server CORS Allow Origins",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "chroma_server_cors_allow_origins",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "chroma_server_grpc_port": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Server gRPC Port",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chroma_server_grpc_port",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "chroma_server_host": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "display_name": "Server Host",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "chroma_server_host",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "chroma_server_http_port": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Server HTTP Port",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chroma_server_http_port",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "chroma_server_ssl_enabled": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Server SSL Enabled",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chroma_server_ssl_enabled",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from copy import deepcopy\n\nfrom chromadb.config import Settings\nfrom langchain_chroma import Chroma\nfrom typing_extensions import override\n\nfrom langflow.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom langflow.base.vectorstores.utils import chroma_collection_to_data\nfrom langflow.io import BoolInput, DropdownInput, HandleInput, IntInput, StrInput\nfrom langflow.schema import Data, DataFrame\n\n\nclass ChromaVectorStoreComponent(LCVectorStoreComponent):\n    \"\"\"Chroma Vector Store with search capabilities.\"\"\"\n\n    display_name: str = \"Chroma DB\"\n    description: str = \"Chroma Vector Store with search capabilities\"\n    name = \"Chroma\"\n    icon = \"Chroma\"\n\n    inputs = [\n        StrInput(\n            name=\"collection_name\",\n            display_name=\"Collection Name\",\n            value=\"langflow\",\n        ),\n        StrInput(\n            name=\"persist_directory\",\n            display_name=\"Persist Directory\",\n        ),\n        *LCVectorStoreComponent.inputs,\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"]),\n        StrInput(\n            name=\"chroma_server_cors_allow_origins\",\n            display_name=\"Server CORS Allow Origins\",\n            advanced=True,\n        ),\n        StrInput(\n            name=\"chroma_server_host\",\n            display_name=\"Server Host\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chroma_server_http_port\",\n            display_name=\"Server HTTP Port\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chroma_server_grpc_port\",\n            display_name=\"Server gRPC Port\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"chroma_server_ssl_enabled\",\n            display_name=\"Server SSL Enabled\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"allow_duplicates\",\n            display_name=\"Allow Duplicates\",\n            advanced=True,\n            info=\"If false, will not add documents that are already in the Vector Store.\",\n        ),\n        DropdownInput(\n            name=\"search_type\",\n            display_name=\"Search Type\",\n            options=[\"Similarity\", \"MMR\"],\n            value=\"Similarity\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Number of Results\",\n            info=\"Number of results to return.\",\n            advanced=True,\n            value=10,\n        ),\n        IntInput(\n            name=\"limit\",\n            display_name=\"Limit\",\n            advanced=True,\n            info=\"Limit the number of records to compare when Allow Duplicates is False.\",\n        ),\n    ]\n\n    @override\n    @check_cached_vector_store\n    def build_vector_store(self) -> Chroma:\n        \"\"\"Builds the Chroma object.\"\"\"\n        try:\n            from chromadb import Client\n            from langchain_chroma import Chroma\n        except ImportError as e:\n            msg = \"Could not import Chroma integration package. Please install it with `pip install langchain-chroma`.\"\n            raise ImportError(msg) from e\n        # Chroma settings\n        chroma_settings = None\n        client = None\n        if self.chroma_server_host:\n            chroma_settings = Settings(\n                chroma_server_cors_allow_origins=self.chroma_server_cors_allow_origins or [],\n                chroma_server_host=self.chroma_server_host,\n                chroma_server_http_port=self.chroma_server_http_port or None,\n                chroma_server_grpc_port=self.chroma_server_grpc_port or None,\n                chroma_server_ssl_enabled=self.chroma_server_ssl_enabled,\n            )\n            client = Client(settings=chroma_settings)\n\n        # Check persist_directory and expand it if it is a relative path\n        persist_directory = self.resolve_path(self.persist_directory) if self.persist_directory is not None else None\n\n        chroma = Chroma(\n            persist_directory=persist_directory,\n            client=client,\n            embedding_function=self.embedding,\n            collection_name=self.collection_name,\n        )\n\n        self._add_documents_to_vector_store(chroma)\n        self.status = chroma_collection_to_data(chroma.get(limit=self.limit))\n        return chroma\n\n    def _add_documents_to_vector_store(self, vector_store: \"Chroma\") -> None:\n        \"\"\"Adds documents to the Vector Store.\"\"\"\n        ingest_data: list | Data | DataFrame = self.ingest_data\n        if not ingest_data:\n            self.status = \"\"\n            return\n\n        # Convert DataFrame to Data if needed using parent's method\n        ingest_data = self._prepare_ingest_data()\n\n        stored_documents_without_id = []\n        if self.allow_duplicates:\n            stored_data = []\n        else:\n            stored_data = chroma_collection_to_data(vector_store.get(limit=self.limit))\n            for value in deepcopy(stored_data):\n                del value.id\n                stored_documents_without_id.append(value)\n\n        documents = []\n        for _input in ingest_data or []:\n            if isinstance(_input, Data):\n                if _input not in stored_documents_without_id:\n                    documents.append(_input.to_lc_document())\n            else:\n                msg = \"Vector Store Inputs must be Data objects.\"\n                raise TypeError(msg)\n\n        if documents and self.embedding is not None:\n            self.log(f\"Adding {len(documents)} documents to the Vector Store.\")\n            vector_store.add_documents(documents)\n        else:\n            self.log(\"No documents to add to the Vector Store.\")\n"
+              },
+              "collection_name": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Collection Name",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "collection_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "langflow"
+              },
+              "embedding": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Embedding",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Embeddings"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "embedding",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "ingest_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Ingest Data",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Data",
+                  "DataFrame"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "ingest_data",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "limit": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Limit",
+                "dynamic": false,
+                "info": "Limit the number of records to compare when Allow Duplicates is False.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "limit",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "number_of_results": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Number of Results",
+                "dynamic": false,
+                "info": "Number of results to return.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "number_of_results",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 10
+              },
+              "persist_directory": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Persist Directory",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "persist_directory",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "/Users/dmitriy.beketov/Documents/test8"
+              },
+              "search_query": {
+                "_input_type": "QueryInput",
+                "advanced": false,
+                "display_name": "Search Query",
+                "dynamic": false,
+                "info": "Enter a query to run a similarity search.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "search_query",
+                "placeholder": "Enter a query...",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "query",
+                "value": ""
+              },
+              "search_type": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Search Type",
+                "dynamic": false,
+                "info": "",
+                "name": "search_type",
+                "options": [
+                  "Similarity",
+                  "MMR"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Similarity"
+              },
+              "should_cache_vector_store": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Cache Vector Store",
+                "dynamic": false,
+                "info": "If True, the vector store will be cached for the current build of the component. This is useful for components that have multiple output methods and want to share the same vector store.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_cache_vector_store",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Chroma"
+        },
+        "dragging": false,
+        "id": "Chroma-0TsX2",
+        "measured": {
+          "height": 532,
+          "width": 320
+        },
+        "position": {
+          "x": 632.8086773915405,
+          "y": 390.47125150132916
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "OllamaEmbeddings-pM407",
+          "node": {
+            "base_classes": [
+              "Embeddings"
+            ],
+            "beta": false,
+            "category": "embeddings",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate embeddings using Ollama models.",
+            "display_name": "Ollama Embeddings",
+            "documentation": "https://python.langchain.com/docs/integrations/text_embedding/ollama",
+            "edited": false,
+            "field_order": [
+              "model_name",
+              "base_url"
+            ],
+            "frozen": false,
+            "icon": "Ollama",
+            "key": "OllamaEmbeddings",
+            "legacy": false,
+            "lf_version": "1.4.2",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Embeddings",
+                "hidden": false,
+                "method": "build_embeddings",
+                "name": "embeddings",
+                "required_inputs": null,
+                "selected": "Embeddings",
+                "tool_mode": true,
+                "types": [
+                  "Embeddings"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.007568328950209746,
+            "template": {
+              "_type": "Component",
+              "base_url": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Ollama Base URL",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "base_url",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "http://localhost:11434"
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\nfrom urllib.parse import urljoin\n\nimport httpx\nfrom langchain_ollama import OllamaEmbeddings\n\nfrom langflow.base.models.model import LCModelComponent\nfrom langflow.base.models.ollama_constants import OLLAMA_EMBEDDING_MODELS, URL_LIST\nfrom langflow.field_typing import Embeddings\nfrom langflow.io import DropdownInput, MessageTextInput, Output\n\nHTTP_STATUS_OK = 200\n\n\nclass OllamaEmbeddingsComponent(LCModelComponent):\n    display_name: str = \"Ollama Embeddings\"\n    description: str = \"Generate embeddings using Ollama models.\"\n    documentation = \"https://python.langchain.com/docs/integrations/text_embedding/ollama\"\n    icon = \"Ollama\"\n    name = \"OllamaEmbeddings\"\n\n    inputs = [\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Ollama Model\",\n            value=\"\",\n            options=[],\n            real_time_refresh=True,\n            refresh_button=True,\n            combobox=True,\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"base_url\",\n            display_name=\"Ollama Base URL\",\n            value=\"\",\n            required=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Embeddings\", name=\"embeddings\", method=\"build_embeddings\"),\n    ]\n\n    def build_embeddings(self) -> Embeddings:\n        try:\n            output = OllamaEmbeddings(model=self.model_name, base_url=self.base_url)\n        except Exception as e:\n            msg = (\n                \"Unable to connect to the Ollama API. \",\n                \"Please verify the base URL, ensure the relevant Ollama model is pulled, and try again.\",\n            )\n            raise ValueError(msg) from e\n        return output\n\n    async def update_build_config(self, build_config: dict, field_value: Any, field_name: str | None = None):\n        if field_name in {\"base_url\", \"model_name\"} and not await self.is_valid_ollama_url(field_value):\n            # Check if any URL in the list is valid\n            valid_url = \"\"\n            for url in URL_LIST:\n                if await self.is_valid_ollama_url(url):\n                    valid_url = url\n                    break\n            build_config[\"base_url\"][\"value\"] = valid_url\n        if field_name in {\"model_name\", \"base_url\", \"tool_model_enabled\"}:\n            if await self.is_valid_ollama_url(self.base_url):\n                build_config[\"model_name\"][\"options\"] = await self.get_model(self.base_url)\n            elif await self.is_valid_ollama_url(build_config[\"base_url\"].get(\"value\", \"\")):\n                build_config[\"model_name\"][\"options\"] = await self.get_model(build_config[\"base_url\"].get(\"value\", \"\"))\n            else:\n                build_config[\"model_name\"][\"options\"] = []\n\n        return build_config\n\n    async def get_model(self, base_url_value: str) -> list[str]:\n        \"\"\"Get the model names from Ollama.\"\"\"\n        model_ids = []\n        try:\n            url = urljoin(base_url_value, \"/api/tags\")\n            async with httpx.AsyncClient() as client:\n                response = await client.get(url)\n                response.raise_for_status()\n                data = response.json()\n\n            model_ids = [model[\"name\"] for model in data.get(\"models\", [])]\n            # this to ensure that not embedding models are included.\n            # not even the base models since models can have 1b 2b etc\n            # handles cases when embeddings models have tags like :latest - etc.\n            model_ids = [\n                model\n                for model in model_ids\n                if any(model.startswith(f\"{embedding_model}\") for embedding_model in OLLAMA_EMBEDDING_MODELS)\n            ]\n\n        except (ImportError, ValueError, httpx.RequestError) as e:\n            msg = \"Could not get model names from Ollama.\"\n            raise ValueError(msg) from e\n\n        return model_ids\n\n    async def is_valid_ollama_url(self, url: str) -> bool:\n        try:\n            async with httpx.AsyncClient() as client:\n                return (await client.get(f\"{url}/api/tags\")).status_code == HTTP_STATUS_OK\n        except httpx.RequestError:\n            return False\n"
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": true,
+                "dialog_inputs": {},
+                "display_name": "Ollama Model",
+                "dynamic": false,
+                "info": "",
+                "name": "model_name",
+                "options": [
+                  "nomic-embed-text:latest"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "refresh_button": true,
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "nomic-embed-text:latest"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "OllamaEmbeddings"
+        },
+        "dragging": false,
+        "id": "OllamaEmbeddings-pM407",
+        "measured": {
+          "height": 312,
+          "width": 320
+        },
+        "position": {
+          "x": 156.05373243099524,
+          "y": 839.9649475380708
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ChatInput-4ZmM3",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get chat inputs from the Playground.",
+            "display_name": "Chat Input",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "files",
+              "background_color",
+              "chat_icon",
+              "text_color"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.4.2",
+            "metadata": {},
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Message",
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "background_color": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Background Color",
+                "dynamic": false,
+                "info": "The background color of the icon.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "background_color",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "chat_icon": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Icon",
+                "dynamic": false,
+                "info": "The icon of the message.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "chat_icon",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.inputs import BoolInput\nfrom langflow.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom langflow.schema.message import Message\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n        MessageTextInput(\n            name=\"background_color\",\n            display_name=\"Background Color\",\n            info=\"The background color of the icon.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"chat_icon\",\n            display_name=\"Icon\",\n            info=\"The icon of the message.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"text_color\",\n            display_name=\"Text Color\",\n            info=\"The text color of the name\",\n            advanced=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        background_color = self.background_color\n        text_color = self.text_color\n        icon = self.chat_icon\n\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=self.session_id,\n            files=self.files,\n            properties={\n                \"background_color\": background_color,\n                \"text_color\": text_color,\n                \"icon\": icon,\n            },\n        )\n        if self.session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n"
+              },
+              "files": {
+                "_input_type": "FileInput",
+                "advanced": true,
+                "display_name": "Files",
+                "dynamic": false,
+                "fileTypes": [
+                  "txt",
+                  "md",
+                  "mdx",
+                  "csv",
+                  "json",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "pdf",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "bmp",
+                  "image"
+                ],
+                "file_path": "",
+                "info": "Files to be sent with the message.",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "files",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "temp_file": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "file",
+                "value": ""
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Text",
+                "dynamic": false,
+                "info": "Message to be passed as input.",
+                "input_types": [],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "text_color": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Text Color",
+                "dynamic": false,
+                "info": "The text color of the name",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "text_color",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": false,
+          "type": "ChatInput"
+        },
+        "dragging": false,
+        "id": "ChatInput-4ZmM3",
+        "measured": {
+          "height": 66,
+          "width": 192
+        },
+        "position": {
+          "x": -951.8833574481696,
+          "y": 597.520180999935
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "MessagetoData-MPUYr",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": true,
+            "category": "processing",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Convert a Message object to a Data object",
+            "display_name": "Message to Data",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "message"
+            ],
+            "frozen": false,
+            "icon": "message-square-share",
+            "key": "MessagetoData",
+            "legacy": false,
+            "lf_version": "1.4.2",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Data",
+                "hidden": false,
+                "method": "convert_message_to_data",
+                "name": "data",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.2798231101512543,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from loguru import logger\n\nfrom langflow.custom import Component\nfrom langflow.io import MessageInput, Output\nfrom langflow.schema import Data\nfrom langflow.schema.message import Message\n\n\nclass MessageToDataComponent(Component):\n    display_name = \"Message to Data\"\n    description = \"Convert a Message object to a Data object\"\n    icon = \"message-square-share\"\n    beta = True\n    name = \"MessagetoData\"\n\n    inputs = [\n        MessageInput(\n            name=\"message\",\n            display_name=\"Message\",\n            info=\"The Message object to convert to a Data object\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Data\", name=\"data\", method=\"convert_message_to_data\"),\n    ]\n\n    def convert_message_to_data(self) -> Data:\n        if isinstance(self.message, Message):\n            # Convert Message to Data\n            return Data(data=self.message.data)\n\n        msg = \"Error converting Message to Data: Input must be a Message object\"\n        logger.opt(exception=True).debug(msg)\n        self.status = msg\n        return Data(data={\"error\": msg})\n"
+              },
+              "message": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Message",
+                "dynamic": false,
+                "info": "The Message object to convert to a Data object",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "MessagetoData"
+        },
+        "dragging": false,
+        "id": "MessagetoData-MPUYr",
+        "measured": {
+          "height": 230,
+          "width": 320
+        },
+        "position": {
+          "x": -714.3931648725242,
+          "y": 331.2429056436636
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "DataOperations-BrFgO",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Perform various operations on a Data object.",
+            "display_name": "Data Operations",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "data",
+              "operations",
+              "select_keys_input",
+              "filter_key",
+              "operator",
+              "filter_values",
+              "append_update_data",
+              "remove_keys_input",
+              "rename_keys_input"
+            ],
+            "frozen": false,
+            "icon": "file-json",
+            "legacy": false,
+            "lf_version": "1.4.2",
+            "metadata": {
+              "keywords": [
+                "data",
+                "operations",
+                "filter values",
+                "Append or Update",
+                "remove keys",
+                "rename keys",
+                "select keys",
+                "literal eval",
+                "combine",
+                "filter",
+                "append",
+                "update",
+                "remove",
+                "rename",
+                "data operations",
+                "data manipulation",
+                "data transformation",
+                "data filtering",
+                "data selection",
+                "data combination"
+              ]
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Data",
+                "hidden": false,
+                "method": "as_data",
+                "name": "data_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "append_update_data": {
+                "_input_type": "DictInput",
+                "advanced": false,
+                "display_name": "Append or Update",
+                "dynamic": false,
+                "info": "Data to Append or Updatethe existing data with.",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "append_update_data",
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {
+                  "key": "value"
+                }
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import ast\nfrom typing import TYPE_CHECKING, Any\n\nfrom langflow.custom import Component\nfrom langflow.inputs import DictInput, DropdownInput, MessageTextInput, SortableListInput\nfrom langflow.io import DataInput, Output\nfrom langflow.logging import logger\nfrom langflow.schema import Data\nfrom langflow.schema.dotdict import dotdict\nfrom langflow.utils.component_utils import set_current_fields, set_field_display\n\nif TYPE_CHECKING:\n    from collections.abc import Callable\n\nACTION_CONFIG = {\n    \"Select Keys\": {\"is_list\": False, \"log_msg\": \"setting filter fields\"},\n    \"Literal Eval\": {\"is_list\": False, \"log_msg\": \"setting evaluate fields\"},\n    \"Combine\": {\"is_list\": True, \"log_msg\": \"setting combine fields\"},\n    \"Filter Values\": {\"is_list\": False, \"log_msg\": \"setting filter values fields\"},\n    \"Append or Update\": {\"is_list\": False, \"log_msg\": \"setting Append or Update fields\"},\n    \"Remove Keys\": {\"is_list\": False, \"log_msg\": \"setting remove keys fields\"},\n    \"Rename Keys\": {\"is_list\": False, \"log_msg\": \"setting rename keys fields\"},\n}\nOPERATORS = {\n    \"equals\": lambda a, b: str(a) == str(b),\n    \"not equals\": lambda a, b: str(a) != str(b),\n    \"contains\": lambda a, b: str(b) in str(a),\n    \"starts with\": lambda a, b: str(a).startswith(str(b)),\n    \"ends with\": lambda a, b: str(a).endswith(str(b)),\n}\n\n\nclass DataOperationsComponent(Component):\n    display_name = \"Data Operations\"\n    description = \"Perform various operations on a Data object.\"\n    icon = \"file-json\"\n    name = \"DataOperations\"\n    default_keys = [\"operations\", \"data\"]\n    metadata = {\n        \"keywords\": [\n            \"data\",\n            \"operations\",\n            \"filter values\",\n            \"Append or Update\",\n            \"remove keys\",\n            \"rename keys\",\n            \"select keys\",\n            \"literal eval\",\n            \"combine\",\n            \"filter\",\n            \"append\",\n            \"update\",\n            \"remove\",\n            \"rename\",\n            \"data operations\",\n            \"data manipulation\",\n            \"data transformation\",\n            \"data filtering\",\n            \"data selection\",\n            \"data combination\",\n        ],\n    }\n    actions_data = {\n        \"Select Keys\": [\"select_keys_input\", \"operations\"],\n        \"Literal Eval\": [],\n        \"Combine\": [],\n        \"Filter Values\": [\"filter_values\", \"operations\", \"operator\", \"filter_key\"],\n        \"Append or Update\": [\"append_update_data\", \"operations\"],\n        \"Remove Keys\": [\"remove_keys_input\", \"operations\"],\n        \"Rename Keys\": [\"rename_keys_input\", \"operations\"],\n    }\n\n    inputs = [\n        DataInput(name=\"data\", display_name=\"Data\", info=\"Data object to filter.\", required=True, is_list=True),\n        SortableListInput(\n            name=\"operations\",\n            display_name=\"Operations\",\n            placeholder=\"Select Operation\",\n            info=\"List of operations to perform on the data.\",\n            options=[\n                {\"name\": \"Select Keys\", \"icon\": \"lasso-select\"},\n                {\"name\": \"Literal Eval\", \"icon\": \"braces\"},\n                {\"name\": \"Combine\", \"icon\": \"merge\"},\n                {\"name\": \"Filter Values\", \"icon\": \"filter\"},\n                {\"name\": \"Append or Update\", \"icon\": \"circle-plus\"},\n                {\"name\": \"Remove Keys\", \"icon\": \"eraser\"},\n                {\"name\": \"Rename Keys\", \"icon\": \"pencil-line\"},\n            ],\n            real_time_refresh=True,\n            limit=1,\n        ),\n        # select keys inputs\n        MessageTextInput(\n            name=\"select_keys_input\",\n            display_name=\"Select Keys\",\n            info=\"List of keys to select from the data.\",\n            show=False,\n            is_list=True,\n        ),\n        # filter values inputs\n        MessageTextInput(\n            name=\"filter_key\",\n            display_name=\"Filter Key\",\n            info=\"Key to filter by.\",\n            is_list=True,\n            show=False,\n        ),\n        DropdownInput(\n            name=\"operator\",\n            display_name=\"Comparison Operator\",\n            options=[\"equals\", \"not equals\", \"contains\", \"starts with\", \"ends with\"],\n            info=\"The operator to apply for comparing the values.\",\n            value=\"equals\",\n            advanced=False,\n            show=False,\n        ),\n        DictInput(\n            name=\"filter_values\",\n            display_name=\"Filter Values\",\n            info=\"List of values to filter by.\",\n            show=False,\n            is_list=True,\n        ),\n        # update/ Append data inputs\n        DictInput(\n            name=\"append_update_data\",\n            display_name=\"Append or Update\",\n            info=\"Data to Append or Updatethe existing data with.\",\n            show=False,\n            value={\"key\": \"value\"},\n            is_list=True,\n        ),\n        # remove keys inputs\n        MessageTextInput(\n            name=\"remove_keys_input\",\n            display_name=\"Remove Keys\",\n            info=\"List of keys to remove from the data.\",\n            show=False,\n            is_list=True,\n        ),\n        # rename keys inputs\n        DictInput(\n            name=\"rename_keys_input\",\n            display_name=\"Rename Keys\",\n            info=\"List of keys to rename in the data.\",\n            show=False,\n            is_list=True,\n            value={\"old_key\": \"new_key\"},\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Data\", name=\"data_output\", method=\"as_data\"),\n    ]\n\n    # Helper methods for data operations\n    def get_data_dict(self) -> dict:\n        \"\"\"Extract data dictionary from Data object.\"\"\"\n        # TODO: rasie error if it s list of data objects\n        data = self.data[0] if isinstance(self.data, list) and len(self.data) == 1 else self.data\n        return data.model_dump()\n\n    def get_normalized_data(self) -> dict:\n        \"\"\"Get normalized data dictionary, handling the 'data' key if present.\"\"\"\n        data_dict = self.get_data_dict()\n        return data_dict.get(\"data\", data_dict)\n\n    def data_is_list(self) -> bool:\n        \"\"\"Check if data contains multiple items.\"\"\"\n        return isinstance(self.data, list) and len(self.data) > 1\n\n    def validate_single_data(self, operation: str) -> None:\n        \"\"\"Validate that the operation is being performed on a single data object.\"\"\"\n        if self.data_is_list():\n            msg = f\"{operation} operation is not supported for multiple data objects.\"\n            raise ValueError(msg)\n\n    def operation_exception(self, operations: list[str]) -> None:\n        \"\"\"Raise exception for incompatible operations.\"\"\"\n        msg = f\"{operations} operations are not supported in combination with each other.\"\n        raise ValueError(msg)\n\n    # Data transformation operations\n    def select_keys(self, evaluate: bool | None = None) -> Data:\n        \"\"\"Select specific keys from the data dictionary.\"\"\"\n        self.validate_single_data(\"Select Keys\")\n        data_dict = self.get_normalized_data()\n        filter_criteria: list[str] = self.select_keys_input\n\n        # Filter the data\n        if len(filter_criteria) == 1 and filter_criteria[0] == \"data\":\n            filtered = data_dict[\"data\"]\n        else:\n            if not all(key in data_dict for key in filter_criteria):\n                msg = f\"Select key not found in data. Available keys: {list(data_dict.keys())}\"\n                raise ValueError(msg)\n            filtered = {key: value for key, value in data_dict.items() if key in filter_criteria}\n\n        # Create a new Data object with the filtered data\n        if evaluate:\n            filtered = self.recursive_eval(filtered)\n\n        # Return a new Data object with the filtered data directly in the data attribute\n        return Data(data=filtered)\n\n    def remove_keys(self) -> Data:\n        \"\"\"Remove specified keys from the data dictionary.\"\"\"\n        self.validate_single_data(\"Remove Keys\")\n        data_dict = self.get_normalized_data()\n        remove_keys_input: list[str] = self.remove_keys_input\n\n        for key in remove_keys_input:\n            if key in data_dict:\n                data_dict.pop(key)\n            else:\n                logger.warning(f\"Key '{key}' not found in data. Skipping removal.\")\n\n        return Data(**data_dict)\n\n    def rename_keys(self) -> Data:\n        \"\"\"Rename keys in the data dictionary.\"\"\"\n        self.validate_single_data(\"Rename Keys\")\n        data_dict = self.get_normalized_data()\n        rename_keys_input: dict[str, str] = self.rename_keys_input\n\n        for old_key, new_key in rename_keys_input.items():\n            if old_key in data_dict:\n                data_dict[new_key] = data_dict[old_key]\n                data_dict.pop(old_key)\n            else:\n                msg = f\"Key '{old_key}' not found in data. Skipping rename.\"\n                raise ValueError(msg)\n\n        return Data(**data_dict)\n\n    def recursive_eval(self, data: Any) -> Any:\n        \"\"\"Recursively evaluate string values in a dictionary or list.\n\n        If the value is a string that can be evaluated, it will be evaluated.\n        Otherwise, the original value is returned.\n        \"\"\"\n        if isinstance(data, dict):\n            return {k: self.recursive_eval(v) for k, v in data.items()}\n        if isinstance(data, list):\n            return [self.recursive_eval(item) for item in data]\n        if isinstance(data, str):\n            try:\n                # Only attempt to evaluate strings that look like Python literals\n                if (\n                    data.strip().startswith((\"{\", \"[\", \"(\", \"'\", '\"'))\n                    or data.strip().lower() in (\"true\", \"false\", \"none\")\n                    or data.strip().replace(\".\", \"\").isdigit()\n                ):\n                    return ast.literal_eval(data)\n                # return data\n            except (ValueError, SyntaxError, TypeError, MemoryError):\n                # If evaluation fails for any reason, return the original string\n                return data\n            else:\n                return data\n        return data\n\n    def evaluate_data(self) -> Data:\n        \"\"\"Evaluate string values in the data dictionary.\"\"\"\n        self.validate_single_data(\"Literal Eval\")\n        logger.info(\"evaluating data\")\n        return Data(**self.recursive_eval(self.get_data_dict()))\n\n    def combine_data(self, evaluate: bool | None = None) -> Data:\n        \"\"\"Combine multiple data objects into one.\"\"\"\n        logger.info(\"combining data\")\n        if not self.data_is_list():\n            return self.data[0] if self.data else Data(data={})\n\n        if len(self.data) == 1:\n            msg = \"Combine operation requires multiple data inputs.\"\n            raise ValueError(msg)\n\n        data_dicts = [data.model_dump().get(\"data\", data.model_dump()) for data in self.data]\n        combined_data = {}\n\n        for data_dict in data_dicts:\n            for key, value in data_dict.items():\n                if key not in combined_data:\n                    combined_data[key] = value\n                elif isinstance(combined_data[key], list):\n                    if isinstance(value, list):\n                        combined_data[key].extend(value)\n                    else:\n                        combined_data[key].append(value)\n                else:\n                    # If current value is not a list, convert it to list and add new value\n                    combined_data[key] = (\n                        [combined_data[key], value] if not isinstance(value, list) else [combined_data[key], *value]\n                    )\n\n        if evaluate:\n            combined_data = self.recursive_eval(combined_data)\n\n        return Data(**combined_data)\n\n    def compare_values(self, item_value: Any, filter_value: str, operator: str) -> bool:\n        \"\"\"Compare values based on the specified operator.\"\"\"\n        comparison_func = OPERATORS.get(operator)\n        if comparison_func:\n            return comparison_func(item_value, filter_value)\n        return False\n\n    def filter_data(self, input_data: list[dict[str, Any]], filter_key: str, filter_value: str, operator: str) -> list:\n        \"\"\"Filter list data based on key, value, and operator.\"\"\"\n        # Validate inputs\n        if not input_data:\n            self.status = \"Input data is empty.\"\n            return []\n\n        if not filter_key or not filter_value:\n            self.status = \"Filter key or value is missing.\"\n            return input_data\n\n        # Filter the data\n        filtered_data = []\n        for item in input_data:\n            if isinstance(item, dict) and filter_key in item:\n                if self.compare_values(item[filter_key], filter_value, operator):\n                    filtered_data.append(item)\n            else:\n                self.status = f\"Warning: Some items don't have the key '{filter_key}' or are not dictionaries.\"\n\n        return filtered_data\n\n    def multi_filter_data(self) -> Data:\n        \"\"\"Apply multiple filters to the data.\"\"\"\n        self.validate_single_data(\"Filter Values\")\n        data_filtered = self.get_normalized_data()\n\n        for filter_key in self.filter_key:\n            if filter_key not in data_filtered:\n                msg = f\"Filter key '{filter_key}' not found in data. Available keys: {list(data_filtered.keys())}\"\n                raise ValueError(msg)\n\n            if isinstance(data_filtered[filter_key], list):\n                for filter_data in self.filter_values:\n                    filter_value = self.filter_values.get(filter_data)\n                    if filter_value is not None:\n                        data_filtered[filter_key] = self.filter_data(\n                            input_data=data_filtered[filter_key],\n                            filter_key=filter_data,\n                            filter_value=filter_value,\n                            operator=self.operator,\n                        )\n            else:\n                msg = f\"Filter key '{filter_key}' is not a list.\"\n                raise TypeError(msg)\n\n        return Data(**data_filtered)\n\n    def append_update(self) -> Data:\n        \"\"\"Append or Update with new key-value pairs.\"\"\"\n        self.validate_single_data(\"Append or Update\")\n        data_filtered = self.get_normalized_data()\n\n        for key, value in self.append_update_data.items():\n            data_filtered[key] = value\n\n        return Data(**data_filtered)\n\n    # Configuration and execution methods\n    def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:\n        \"\"\"Update build configuration based on selected action.\"\"\"\n        if field_name != \"operations\":\n            return build_config\n\n        build_config[\"operations\"][\"value\"] = field_value\n        selected_actions = [action[\"name\"] for action in field_value]\n\n        # Handle single action case\n        if len(selected_actions) == 1 and selected_actions[0] in ACTION_CONFIG:\n            action = selected_actions[0]\n            config = ACTION_CONFIG[action]\n\n            build_config[\"data\"][\"is_list\"] = config[\"is_list\"]\n            logger.info(config[\"log_msg\"])\n\n            return set_current_fields(\n                build_config=build_config,\n                action_fields=self.actions_data,\n                selected_action=action,\n                default_fields=self.default_keys,\n                func=set_field_display,\n            )\n\n        # Handle no operations case\n        if not selected_actions:\n            logger.info(\"setting default fields\")\n            return set_current_fields(\n                build_config=build_config,\n                action_fields=self.actions_data,\n                selected_action=None,\n                default_fields=self.default_keys,\n                func=set_field_display,\n            )\n\n        return build_config\n\n    def as_data(self) -> Data:\n        \"\"\"Execute the selected action on the data.\"\"\"\n        if not hasattr(self, \"operations\") or not self.operations:\n            return Data(data={})\n\n        selected_actions = [action[\"name\"] for action in self.operations]\n        logger.info(f\"selected_actions: {selected_actions}\")\n\n        # Only handle single action case for now\n        if len(selected_actions) != 1:\n            return Data(data={})\n\n        action = selected_actions[0]\n\n        # Explicitly type the action_map\n        action_map: dict[str, Callable[[], Data]] = {\n            \"Select Keys\": self.select_keys,\n            \"Literal Eval\": self.evaluate_data,\n            \"Combine\": self.combine_data,\n            \"Filter Values\": self.multi_filter_data,\n            \"Append or Update\": self.append_update,\n            \"Remove Keys\": self.remove_keys,\n            \"Rename Keys\": self.rename_keys,\n        }\n\n        handler: Callable[[], Data] | None = action_map.get(action)\n        if handler:\n            try:\n                return handler()\n            except Exception as e:\n                logger.error(f\"Error executing {action}: {e!s}\")\n                raise\n\n        return Data(data={})\n"
+              },
+              "data": {
+                "_input_type": "DataInput",
+                "advanced": false,
+                "display_name": "Data",
+                "dynamic": false,
+                "info": "Data object to filter.",
+                "input_types": [
+                  "Data"
+                ],
+                "is_list": false,
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "data",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "filter_key": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Filter Key",
+                "dynamic": false,
+                "info": "Key to filter by.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "filter_key",
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "filter_values": {
+                "_input_type": "DictInput",
+                "advanced": false,
+                "display_name": "Filter Values",
+                "dynamic": false,
+                "info": "List of values to filter by.",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "filter_values",
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "operations": {
+                "_input_type": "SortableListInput",
+                "advanced": false,
+                "display_name": "Operations",
+                "dynamic": false,
+                "info": "List of operations to perform on the data.",
+                "limit": 1,
+                "name": "operations",
+                "options": [
+                  {
+                    "icon": "lasso-select",
+                    "name": "Select Keys"
+                  },
+                  {
+                    "icon": "braces",
+                    "name": "Literal Eval"
+                  },
+                  {
+                    "icon": "merge",
+                    "name": "Combine"
+                  },
+                  {
+                    "icon": "filter",
+                    "name": "Filter Values"
+                  },
+                  {
+                    "icon": "circle-plus",
+                    "name": "Append or Update"
+                  },
+                  {
+                    "icon": "eraser",
+                    "name": "Remove Keys"
+                  },
+                  {
+                    "icon": "pencil-line",
+                    "name": "Rename Keys"
+                  }
+                ],
+                "placeholder": "Select Operation",
+                "real_time_refresh": true,
+                "required": false,
+                "search_category": [],
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "sortableList",
+                "value": [
+                  {
+                    "chosen": false,
+                    "icon": "lasso-select",
+                    "name": "Select Keys",
+                    "selected": false
+                  }
+                ]
+              },
+              "operator": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Comparison Operator",
+                "dynamic": false,
+                "info": "The operator to apply for comparing the values.",
+                "name": "operator",
+                "options": [
+                  "equals",
+                  "not equals",
+                  "contains",
+                  "starts with",
+                  "ends with"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "equals"
+              },
+              "remove_keys_input": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Remove Keys",
+                "dynamic": false,
+                "info": "List of keys to remove from the data.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "remove_keys_input",
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "rename_keys_input": {
+                "_input_type": "DictInput",
+                "advanced": false,
+                "display_name": "Rename Keys",
+                "dynamic": false,
+                "info": "List of keys to rename in the data.",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "rename_keys_input",
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {
+                  "old_key": "new_key"
+                }
+              },
+              "select_keys_input": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Select Keys",
+                "dynamic": false,
+                "info": "List of keys to select from the data.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "select_keys_input",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": [
+                  "text"
+                ]
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "DataOperations"
+        },
+        "dragging": false,
+        "id": "DataOperations-BrFgO",
+        "measured": {
+          "height": 351,
+          "width": 320
+        },
+        "position": {
+          "x": -251.99120056661164,
+          "y": 66.3925872862688
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "RecursiveCharacterTextSplitter-mdQcv",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "category": "langchain_utilities",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Split text trying to keep all related text together.",
+            "display_name": "Recursive Character Text Splitter",
+            "documentation": "https://docs.langflow.org/components-processing",
+            "edited": false,
+            "field_order": [
+              "chunk_size",
+              "chunk_overlap",
+              "data_input",
+              "separators"
+            ],
+            "frozen": false,
+            "icon": "LangChain",
+            "key": "RecursiveCharacterTextSplitter",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Data",
+                "hidden": false,
+                "method": "transform_data",
+                "name": "data",
+                "required_inputs": [],
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.03162277660168379,
+            "template": {
+              "_type": "Component",
+              "chunk_overlap": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "display_name": "Chunk Overlap",
+                "dynamic": false,
+                "info": "The amount of overlap between chunks.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chunk_overlap",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 200
+              },
+              "chunk_size": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "display_name": "Chunk Size",
+                "dynamic": false,
+                "info": "The maximum length of each chunk.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chunk_size",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 1000
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\n\nfrom langchain_text_splitters import RecursiveCharacterTextSplitter, TextSplitter\n\nfrom langflow.base.textsplitters.model import LCTextSplitterComponent\nfrom langflow.inputs.inputs import DataInput, IntInput, MessageTextInput\nfrom langflow.utils.util import unescape_string\n\n\nclass RecursiveCharacterTextSplitterComponent(LCTextSplitterComponent):\n    display_name: str = \"Recursive Character Text Splitter\"\n    description: str = \"Split text trying to keep all related text together.\"\n    documentation: str = \"https://docs.langflow.org/components-processing\"\n    name = \"RecursiveCharacterTextSplitter\"\n    icon = \"LangChain\"\n\n    inputs = [\n        IntInput(\n            name=\"chunk_size\",\n            display_name=\"Chunk Size\",\n            info=\"The maximum length of each chunk.\",\n            value=1000,\n        ),\n        IntInput(\n            name=\"chunk_overlap\",\n            display_name=\"Chunk Overlap\",\n            info=\"The amount of overlap between chunks.\",\n            value=200,\n        ),\n        DataInput(\n            name=\"data_input\",\n            display_name=\"Input\",\n            info=\"The texts to split.\",\n            input_types=[\"Document\", \"Data\"],\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"separators\",\n            display_name=\"Separators\",\n            info='The characters to split on.\\nIf left empty defaults to [\"\\\\n\\\\n\", \"\\\\n\", \" \", \"\"].',\n            is_list=True,\n        ),\n    ]\n\n    def get_data_input(self) -> Any:\n        return self.data_input\n\n    def build_text_splitter(self) -> TextSplitter:\n        if not self.separators:\n            separators: list[str] | None = None\n        else:\n            # check if the separators list has escaped characters\n            # if there are escaped characters, unescape them\n            separators = [unescape_string(x) for x in self.separators]\n\n        return RecursiveCharacterTextSplitter(\n            separators=separators,\n            chunk_size=self.chunk_size,\n            chunk_overlap=self.chunk_overlap,\n        )\n"
+              },
+              "data_input": {
+                "_input_type": "DataInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "The texts to split.",
+                "input_types": [
+                  "Document",
+                  "Data"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "data_input",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "separators": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Separators",
+                "dynamic": false,
+                "info": "The characters to split on.\nIf left empty defaults to [\"\\n\\n\", \"\\n\", \" \", \"\"].",
+                "input_types": [
+                  "Message"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "separators",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": [
+                  "РАЗДЕЛ",
+                  "Статья"
+                ]
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "RecursiveCharacterTextSplitter"
+        },
+        "dragging": false,
+        "id": "RecursiveCharacterTextSplitter-mdQcv",
+        "measured": {
+          "height": 517,
+          "width": 320
+        },
+        "position": {
+          "x": 154.01676813055784,
+          "y": 173.12384242401552
+        },
+        "selected": false,
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": 724.6798506889683,
+      "y": 50.463289202126646,
+      "zoom": 0.6919753828397338
+    }
+  },
+  "description": "Flow into the Future of Language.",
+  "endpoint_name": null,
+  "fs_path": null,
+  "gradient": null,
+  "icon": null,
+  "icon_bg_color": null,
+  "id": "e6d3bece-2b75-4016-b47b-01c6bfbefc3c",
+  "is_component": false,
+  "locked": false,
+  "mcp_enabled": true,
+  "name": "Store",
+  "tags": [],
+  "updated_at": "2025-06-05T15:11:28+00:00",
+  "webhook": false
+}
